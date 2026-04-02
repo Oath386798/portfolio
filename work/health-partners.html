@@ -25,8 +25,9 @@
       }
     }
   </script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-<body class="font-sans text-gray-900 antialiased">
+<body class="font-sans text-gray-900 antialiased overflow-x-hidden">
 
   <!-- Nav -->
   <nav class="flex items-center justify-between px-6 md:px-20 py-6 border-b border-gray-100">
@@ -56,9 +57,9 @@
   <section class="bg-brand text-white">
     <div class="max-w-6xl mx-auto px-6 md:px-20 py-16 md:py-20 flex flex-col md:flex-row items-center gap-10">
       <div class="flex-1">
-        <h1 class="text-3xl md:text-4xl font-bold">Health Partners</h1>
-        <p class="mt-3 text-sm opacity-80">Member Programs Page Redesign</p>
-        <p class="mt-1 text-sm opacity-80">UX/UI Design</p>
+        <h1 class="text-3xl md:text-4xl font-bold" data-aos="fade-up">Health Partners</h1>
+        <p class="mt-3 text-sm opacity-80" data-aos="fade-up" data-aos-delay="100">Member Programs Page Redesign</p>
+        <p class="mt-1 text-sm opacity-80" data-aos="fade-up" data-aos-delay="100">UX/UI Design</p>
         <a
           href="#overview"
           class="inline-block mt-6 px-6 py-2.5 border border-white text-sm font-medium rounded-full hover:bg-white hover:text-brand transition-colors"
@@ -66,9 +67,9 @@
           View Case Study
         </a>
       </div>
-      <div class="w-full md:w-[340px] shrink-0">
+      <div class="w-full md:w-[340px] shrink-0" data-aos="fade-left" data-aos-delay="200">
         <img
-          src="https://placehold.co/500x400/2d1060/ffffff?text=Health+Partners%0ASite+Preview"
+          src="../images/imac-mockup.png"
           alt="Health Partners website shown on a monitor"
           class="rounded-lg w-full"
         >
@@ -79,7 +80,7 @@
   <!-- Company Overview & Role -->
   <section id="overview" class="max-w-6xl mx-auto px-6 md:px-20 py-16 md:py-20">
     <div class="flex flex-col md:flex-row gap-12 md:gap-20">
-      <div class="flex-1">
+      <div class="flex-1" data-aos="fade-up">
         <h2 class="text-2xl md:text-3xl font-bold">Company Overview</h2>
         <p class="mt-4 text-sm leading-relaxed text-gray-600">
           Health Partners is a nonprofit integrated health care organization based in
@@ -89,7 +90,7 @@
           largest consumer-governed health care organizations in the country.
         </p>
       </div>
-      <div class="md:w-48 shrink-0">
+      <div class="md:w-48 shrink-0" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-2xl md:text-3xl font-bold">Role</h2>
         <ul class="mt-4 text-sm text-gray-600 space-y-1">
           <li>&bull; UX Designer</li>
@@ -101,7 +102,7 @@
 
   <!-- Why Redesign Callout -->
   <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
-    <div class="bg-brand text-white rounded-xl px-8 md:px-10 py-8 md:py-10">
+    <div class="bg-brand text-white rounded-xl px-8 md:px-10 py-8 md:py-10" data-aos="fade-up">
       <h3 class="text-base md:text-lg font-bold">Why was a redesign needed?</h3>
       <ul class="mt-4 text-sm leading-relaxed opacity-90 space-y-3">
         <li>&bull; Users regularly struggled to find programs and benefits information on the existing pages</li>
@@ -113,8 +114,8 @@
 
   <!-- The Redesign -->
   <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
-    <h2 class="text-2xl md:text-3xl font-bold text-center">The Redesign</h2>
-    <p class="mt-4 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-center" data-aos="fade-up">The Redesign</h2>
+    <p class="mt-4 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
       The goal was to take the existing Member Programs &amp; Perks pages and redesign
       them to be more intuitive, visually consistent, and accessible. Below is a
       comparison of the original page alongside the final redesigned version.
@@ -122,19 +123,15 @@
 
     <div class="mt-12 flex flex-col md:flex-row gap-8 md:gap-12">
       <!-- Before -->
-      <div class="flex-1 text-center">
+      <div class="flex-1 text-center" data-aos="fade-right">
         <p class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4">Before</p>
-        <img
-          src="https://placehold.co/400x640/e2e0e6/666?text=Living+Well%0AOriginal+Page"
-          alt="Original Living Well page before redesign"
-          class="rounded-lg w-full border border-gray-200"
-        >
+        <div class="rounded-lg w-full border border-gray-200 bg-gray-50 aspect-[2/3] flex items-center justify-center text-gray-400 text-sm">Image coming soon</div>
       </div>
       <!-- After -->
-      <div class="flex-1 text-center">
+      <div class="flex-1 text-center" data-aos="fade-left">
         <p class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4">After</p>
         <img
-          src="https://placehold.co/400x700/e2e0e6/666?text=Programs+%26+Perks%0AFinal+Redesign"
+          src="../images/programs-perks-final.png"
           alt="Redesigned Programs and Perks page"
           class="rounded-lg w-full border border-gray-200"
         >
@@ -144,7 +141,7 @@
 
   <!-- The Design Process -->
   <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
-    <h2 class="text-2xl md:text-3xl font-bold text-center">The Design Process</h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-center" data-aos="fade-up">The Design Process</h2>
     <p class="mt-2 text-xs tracking-[0.1em] uppercase text-gray-500 text-center">
       Digital Health &bull; Patient-facing Touchpoints
     </p>
@@ -157,18 +154,18 @@
     </p>
 
     <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <img
-        src="https://placehold.co/320x520/e8e4ee/666?text=Process%0AImage+1"
+      <img data-aos="fade-up"
+        src="../images/image-heavy-page.png"
         alt="Design process — content audit and wireframes"
         class="rounded-lg w-full border border-gray-200"
       >
-      <img
-        src="https://placehold.co/320x520/e8e4ee/666?text=Process%0AImage+2"
+      <img data-aos="fade-up" data-aos-delay="100"
+        src="../images/card-heavy-page.png"
         alt="Design process — mid-fidelity iterations"
         class="rounded-lg w-full border border-gray-200"
       >
-      <img
-        src="https://placehold.co/320x600/e8e4ee/666?text=Process%0AImage+3"
+      <img data-aos="fade-up" data-aos-delay="200"
+        src="../images/ppr-list.png"
         alt="Design process — high-fidelity screens"
         class="rounded-lg w-full border border-gray-200"
       >
@@ -177,7 +174,7 @@
 
   <!-- User Testing -->
   <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
-    <h2 class="text-2xl md:text-3xl font-bold text-center">User Testing</h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-center" data-aos="fade-up">User Testing</h2>
     <p class="mt-2 text-xs tracking-[0.1em] uppercase text-gray-500 text-center">
       Moderated Usability Tests &bull; Live Prototype Walkthroughs
     </p>
@@ -190,29 +187,17 @@
     </p>
 
     <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-      <img
-        src="https://placehold.co/400x240/e8e4ee/666?text=Testing%0AScreenshot+1"
-        alt="User testing session screenshot"
-        class="rounded-lg w-full border border-gray-200"
-      >
+      <div class="rounded-lg w-full border border-gray-200 bg-gray-50 aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">Image coming soon</div>
       <div class="space-y-4">
-        <img
-          src="https://placehold.co/400x110/e8e4ee/666?text=Testing+Artifact+1"
-          alt="User testing findings"
-          class="rounded-lg w-full border border-gray-200"
-        >
-        <img
-          src="https://placehold.co/400x110/e8e4ee/666?text=Testing+Artifact+2"
-          alt="User testing results summary"
-          class="rounded-lg w-full border border-gray-200"
-        >
+        <div class="rounded-lg w-full border border-gray-200 bg-gray-50 aspect-video flex items-center justify-center text-gray-400 text-sm">Image coming soon</div>
+        <div class="rounded-lg w-full border border-gray-200 bg-gray-50 aspect-video flex items-center justify-center text-gray-400 text-sm">Image coming soon</div>
       </div>
     </div>
   </section>
 
   <!-- Final Design -->
   <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
-    <h2 class="text-2xl md:text-3xl font-bold text-center">Final Design</h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-center" data-aos="fade-up">Final Design</h2>
     <p class="mt-6 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto">
       The final redesign introduced a cleaner layout with better content hierarchy,
       improved navigation between program categories, and full responsiveness across
@@ -223,32 +208,24 @@
 
     <div class="mt-12 flex flex-col md:flex-row gap-6">
       <img
-        src="https://placehold.co/480x750/e8e4ee/666?text=Final+Design%0APage+1"
-        alt="Final design — Programs and Perks page 1"
+        src="../images/programs-perks-final.png"
+        alt="Final design — Programs and Perks page"
         class="rounded-lg w-full md:w-1/2 border border-gray-200"
       >
-      <img
-        src="https://placehold.co/480x750/e8e4ee/666?text=Final+Design%0APage+2"
-        alt="Final design — Programs and Perks page 2"
-        class="rounded-lg w-full md:w-1/2 border border-gray-200"
-      >
+      <div class="rounded-lg w-full md:w-1/2 border border-gray-200 bg-gray-50 flex items-center justify-center text-gray-400 text-sm">Image coming soon</div>
     </div>
 
     <!-- Full-width final screenshot -->
     <div class="mt-8">
-      <img
-        src="https://placehold.co/1200x500/e8e4ee/666?text=Full+Width+Final+Design+Screenshot"
-        alt="Full-width view of the final redesigned Health Partners pages"
-        class="rounded-lg w-full border border-gray-200"
-      >
+      <div class="rounded-lg w-full border border-gray-200 bg-gray-50 aspect-[21/9] flex items-center justify-center text-gray-400 text-sm">Image coming soon</div>
     </div>
   </section>
 
   <!-- Contact -->
   <section class="bg-gray-100 px-6 md:px-20 py-16 md:py-24">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-bold leading-snug text-center">Want to get in touch?<br>Drop me a line!</h2>
-      <form class="mt-10 max-w-2xl mx-auto" onsubmit="return false;">
+      <h2 class="text-2xl md:text-3xl font-bold leading-snug text-center" data-aos="fade-up">Want to get in touch?<br>Drop me a line!</h2>
+      <form class="mt-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100" onsubmit="return false;">
         <div class="flex flex-col md:flex-row gap-8">
           <div class="flex-1">
             <label class="text-[0.65rem] font-bold tracking-[0.2em] uppercase">Name</label>
@@ -292,7 +269,9 @@
     <span>01 / 01</span>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
+    AOS.init({ duration: 800, once: true, offset: 80 });
     document.getElementById('menu-toggle').addEventListener('click', function () {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
