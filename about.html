@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Ivan Figueroa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#1B0A3C',
+              light: '#F5F0FA',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-900 antialiased">
+
+  <!-- Nav -->
+  <nav class="flex items-center justify-between px-6 md:px-20 py-6 border-b border-gray-100">
+    <a href="index.html" class="text-2xl font-black tracking-tight">IF</a>
+    <div class="hidden md:flex gap-10 text-xs font-semibold tracking-[0.2em] uppercase">
+      <a href="index.html" class="hover:text-brand transition-colors">Home</a>
+      <a href="index.html#projects" class="hover:text-brand transition-colors">Projects</a>
+      <a href="about.html" class="hover:text-brand transition-colors">About</a>
+    </div>
+    <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-gray-900"></span>
+      <span class="block w-6 h-0.5 bg-gray-900"></span>
+      <span class="block w-6 h-0.5 bg-gray-900"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-6">
+    <div class="flex flex-col gap-4 text-sm font-semibold tracking-[0.15em] uppercase">
+      <a href="index.html">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="bg-brand-light">
+    <div class="max-w-6xl mx-auto px-6 md:px-20 py-16 md:py-24 flex flex-col md:flex-row items-start gap-12">
+      <div class="flex-1">
+        <p class="text-sm text-gray-500">Hey there!</p>
+        <h1 class="mt-2 text-3xl md:text-4xl font-bold">I'm Ivan Figueroa</h1>
+        <p class="mt-6 text-sm leading-relaxed text-gray-700 max-w-md">
+          I'm a UX/UI designer based in Minneapolis, MN. I specialize in crafting
+          intuitive, accessible designs that prioritize usability for diverse audiences.
+          I'm also a big fan of Chihuahuas.
+        </p>
+      </div>
+      <div class="w-48 md:w-64 shrink-0">
+        <img
+          src="https://placehold.co/272x340/d4c8e8/1B0A3C?text=Ivan"
+          alt="Photo of Ivan Figueroa"
+          class="rounded-lg w-full"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Box -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 py-16 md:py-20">
+    <div class="bg-brand text-white rounded-xl px-8 md:px-10 py-10">
+      <h2 class="text-lg md:text-xl font-bold">My Career So Far</h2>
+      <p class="mt-4 text-sm leading-relaxed opacity-90">
+        I graduated from Prime Digital Academy with a certificate in UX Design in 2020.
+        I have a degree in Photography &amp; Digital Imaging from Minneapolis Community &amp;
+        Technical College. The bulk of my UX experience has been in start ups. My latest
+        role was working as a UX Designer at Health Partners. My wife and I own an art
+        business called Pax Paints LLC. I'm in charge of administrative work alongside
+        managing our website and social media.
+      </p>
+      <a href="https://paxpaints.com" target="_blank" rel="noopener" class="inline-block mt-4 text-sm underline opacity-80 hover:opacity-100 transition-opacity">
+        Check out paxpaints.com
+      </a>
+    </div>
+  </section>
+
+  <!-- Skills Grid -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-20 md:pb-28">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 md:px-16">
+      <!-- Applications -->
+      <div>
+        <h3 class="text-xl md:text-2xl font-bold mb-4">Applications</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>Figma</li>
+          <li>Sketch</li>
+          <li>Invision</li>
+          <li>Adobe XD</li>
+          <li>Lightroom</li>
+          <li>Photoshop</li>
+          <li>Axure RP</li>
+        </ul>
+      </div>
+      <!-- Skills -->
+      <div>
+        <h3 class="text-xl md:text-2xl font-bold mb-4">Skills</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>UI Design</li>
+          <li>UX Design</li>
+          <li>HTML/CSS</li>
+          <li>Prototyping</li>
+          <li>Wireframing</li>
+          <li>Branding</li>
+        </ul>
+      </div>
+      <!-- Interests -->
+      <div>
+        <h3 class="text-xl md:text-2xl font-bold mb-4">Interests</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>Bass Guitar</li>
+          <li>Card Games</li>
+          <li>Writing Poetry</li>
+          <li>Films</li>
+          <li>Chihuahuas</li>
+          <li>Horror Novels</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Nav -->
+  <footer class="border-t border-gray-200 px-6 md:px-20 py-10">
+    <div class="max-w-6xl mx-auto flex justify-between text-sm text-gray-500">
+      <span>&larr; Before</span>
+      <span>After &rarr;</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

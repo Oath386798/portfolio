@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivan Figueroa — UX/UI Designer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#1B0A3C',
+              light: '#F5F0FA',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-900 antialiased">
+
+  <!-- Nav -->
+  <nav class="flex items-center justify-between px-6 md:px-20 py-6 border-b border-gray-100">
+    <a href="index.html" class="text-2xl font-black tracking-tight">IF</a>
+    <!-- Desktop nav -->
+    <div class="hidden md:flex gap-10 text-xs font-semibold tracking-[0.2em] uppercase">
+      <a href="index.html" class="hover:text-brand transition-colors">Home</a>
+      <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
+      <a href="about.html" class="hover:text-brand transition-colors">About</a>
+    </div>
+    <!-- Mobile hamburger -->
+    <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-gray-900"></span>
+      <span class="block w-6 h-0.5 bg-gray-900"></span>
+      <span class="block w-6 h-0.5 bg-gray-900"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-6">
+    <div class="flex flex-col gap-4 text-sm font-semibold tracking-[0.15em] uppercase">
+      <a href="index.html">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="px-6 md:px-20 pt-16 md:pt-24 pb-20 md:pb-32">
+    <p class="text-base font-semibold">Ivan Figueroa</p>
+    <p class="text-sm text-gray-500 mt-0.5">UX/UI Designer</p>
+    <h1 class="mt-10 md:mt-16 text-4xl md:text-[3.25rem] font-medium leading-tight max-w-2xl">
+      Hey there!&#x1F44B; I'm a UX/UI designer based in chilly Minneapolis, MN.
+    </h1>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="px-6 md:px-20 pb-20 md:pb-32">
+    <div class="bg-gray-50 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-3xl mx-auto">
+      <div class="w-full md:w-1/2">
+        <img
+          src="https://placehold.co/480x360/e8e0f0/1B0A3C?text=Health+Partners%0AProject+Preview"
+          alt="Health Partners member programs page redesign shown on a monitor"
+          class="rounded-lg w-full"
+        >
+      </div>
+      <div class="w-full md:w-1/2">
+        <h3 class="text-xl font-bold">Health Partners</h3>
+        <p class="text-sm font-semibold mt-1">UX/UI Design</p>
+        <p class="text-sm text-gray-500 mt-1">Member programs page redesign</p>
+        <a
+          href="work/health-partners.html"
+          class="inline-block mt-5 px-6 py-2.5 bg-brand text-white text-sm font-medium rounded-full hover:opacity-90 transition-opacity"
+        >
+          View Project
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="bg-gray-100 px-6 md:px-20 py-16 md:py-24">
+    <h2 class="text-2xl md:text-3xl font-bold leading-snug">Want to get in touch?<br>Drop me a line!</h2>
+    <form class="mt-10 max-w-2xl" onsubmit="return false;">
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="flex-1">
+          <label class="text-[0.65rem] font-bold tracking-[0.2em] uppercase">Name</label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            class="mt-2 w-full border-b border-gray-400 bg-transparent py-2 text-sm outline-none focus:border-brand transition-colors"
+          >
+        </div>
+        <div class="flex-1">
+          <label class="text-[0.65rem] font-bold tracking-[0.2em] uppercase">Email Address</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="mt-2 w-full border-b border-gray-400 bg-transparent py-2 text-sm outline-none focus:border-brand transition-colors"
+          >
+        </div>
+      </div>
+      <div class="mt-8">
+        <label class="text-[0.65rem] font-bold tracking-[0.2em] uppercase">Write a Message</label>
+        <textarea
+          placeholder="Enter your message"
+          rows="5"
+          class="mt-2 w-full border border-gray-300 bg-transparent p-3 text-sm outline-none resize-none focus:border-brand transition-colors"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="mt-6 px-8 py-3 bg-gray-900 text-white text-[0.65rem] font-bold tracking-[0.2em] uppercase hover:bg-black transition-colors"
+      >
+        Submit
+      </button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

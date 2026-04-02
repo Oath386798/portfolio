@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Partners — Ivan Figueroa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#1B0A3C',
+              light: '#F5F0FA',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-900 antialiased">
+
+  <!-- Nav -->
+  <nav class="flex items-center justify-between px-6 md:px-20 py-6 border-b border-gray-100">
+    <a href="../index.html" class="text-2xl font-black tracking-tight">IF</a>
+    <div class="hidden md:flex gap-10 text-xs font-semibold tracking-[0.2em] uppercase">
+      <a href="../index.html" class="hover:text-brand transition-colors">Home</a>
+      <a href="../index.html#projects" class="hover:text-brand transition-colors">Projects</a>
+      <a href="../about.html" class="hover:text-brand transition-colors">About</a>
+    </div>
+    <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-white"></span>
+      <span class="block w-6 h-0.5 bg-white"></span>
+      <span class="block w-6 h-0.5 bg-white"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-6">
+    <div class="flex flex-col gap-4 text-sm font-semibold tracking-[0.15em] uppercase">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="bg-brand text-white">
+    <div class="max-w-6xl mx-auto px-6 md:px-20 py-16 md:py-20 flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <h1 class="text-3xl md:text-4xl font-bold">Health Partners</h1>
+        <p class="mt-3 text-sm opacity-80">Member Programs Page Redesign</p>
+        <p class="mt-1 text-sm opacity-80">UX/UI Design</p>
+        <a
+          href="#overview"
+          class="inline-block mt-6 px-6 py-2.5 border border-white text-sm font-medium rounded-full hover:bg-white hover:text-brand transition-colors"
+        >
+          View Case Study
+        </a>
+      </div>
+      <div class="w-full md:w-[340px] shrink-0">
+        <img
+          src="https://placehold.co/500x400/2d1060/ffffff?text=Health+Partners%0ASite+Preview"
+          alt="Health Partners website shown on a monitor"
+          class="rounded-lg w-full"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Overview & Role -->
+  <section id="overview" class="max-w-6xl mx-auto px-6 md:px-20 py-16 md:py-20">
+    <div class="flex flex-col md:flex-row gap-12 md:gap-20">
+      <div class="flex-1">
+        <h2 class="text-2xl md:text-3xl font-bold">Company Overview</h2>
+        <p class="mt-4 text-sm leading-relaxed text-gray-600">
+          Health Partners is a nonprofit integrated health care organization based in
+          Bloomington, Minnesota. They provide care, insurance, research, and education
+          for patients and members across the upper Midwest. The organization serves
+          over 1.2 million medical and dental health plan members and is one of the
+          largest consumer-governed health care organizations in the country.
+        </p>
+      </div>
+      <div class="md:w-48 shrink-0">
+        <h2 class="text-2xl md:text-3xl font-bold">Role</h2>
+        <ul class="mt-4 text-sm text-gray-600 space-y-1">
+          <li>&bull; UX Designer</li>
+          <li>&bull; Researcher</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Redesign Callout -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
+    <div class="bg-brand text-white rounded-xl px-8 md:px-10 py-8 md:py-10">
+      <h3 class="text-base md:text-lg font-bold">Why was a redesign needed?</h3>
+      <ul class="mt-4 text-sm leading-relaxed opacity-90 space-y-3">
+        <li>&bull; Users regularly struggled to find programs and benefits information on the existing pages</li>
+        <li>&bull; The design didn't conform to the company's updated design system and brand guidelines</li>
+        <li>&bull; The page needed to function across multiple device sizes and meet accessibility standards</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- The Redesign -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
+    <h2 class="text-2xl md:text-3xl font-bold text-center">The Redesign</h2>
+    <p class="mt-4 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto">
+      The goal was to take the existing Member Programs &amp; Perks pages and redesign
+      them to be more intuitive, visually consistent, and accessible. Below is a
+      comparison of the original page alongside the final redesigned version.
+    </p>
+
+    <div class="mt-12 flex flex-col md:flex-row gap-8 md:gap-12">
+      <!-- Before -->
+      <div class="flex-1 text-center">
+        <p class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4">Before</p>
+        <img
+          src="https://placehold.co/400x640/e2e0e6/666?text=Living+Well%0AOriginal+Page"
+          alt="Original Living Well page before redesign"
+          class="rounded-lg w-full border border-gray-200"
+        >
+      </div>
+      <!-- After -->
+      <div class="flex-1 text-center">
+        <p class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4">After</p>
+        <img
+          src="https://placehold.co/400x700/e2e0e6/666?text=Programs+%26+Perks%0AFinal+Redesign"
+          alt="Redesigned Programs and Perks page"
+          class="rounded-lg w-full border border-gray-200"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- The Design Process -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
+    <h2 class="text-2xl md:text-3xl font-bold text-center">The Design Process</h2>
+    <p class="mt-2 text-xs tracking-[0.1em] uppercase text-gray-500 text-center">
+      Digital Health &bull; Patient-facing Touchpoints
+    </p>
+    <p class="mt-6 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto">
+      The process began with a content audit of the existing member programs pages,
+      followed by stakeholder interviews and competitive analysis. From there, I moved
+      into wireframing low-fidelity layouts, gathered feedback through design reviews,
+      and iterated toward a high-fidelity solution that aligned with the updated brand
+      system.
+    </p>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <img
+        src="https://placehold.co/320x520/e8e4ee/666?text=Process%0AImage+1"
+        alt="Design process — content audit and wireframes"
+        class="rounded-lg w-full border border-gray-200"
+      >
+      <img
+        src="https://placehold.co/320x520/e8e4ee/666?text=Process%0AImage+2"
+        alt="Design process — mid-fidelity iterations"
+        class="rounded-lg w-full border border-gray-200"
+      >
+      <img
+        src="https://placehold.co/320x600/e8e4ee/666?text=Process%0AImage+3"
+        alt="Design process — high-fidelity screens"
+        class="rounded-lg w-full border border-gray-200"
+      >
+    </div>
+  </section>
+
+  <!-- User Testing -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
+    <h2 class="text-2xl md:text-3xl font-bold text-center">User Testing</h2>
+    <p class="mt-2 text-xs tracking-[0.1em] uppercase text-gray-500 text-center">
+      Moderated Usability Tests &bull; Live Prototype Walkthroughs
+    </p>
+    <p class="mt-6 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto">
+      Moderated usability testing was conducted with a group of Health Partners members.
+      Participants were asked to complete key tasks on the redesigned prototype — such as
+      locating specific programs and understanding eligibility — while I observed pain
+      points and gathered qualitative feedback. Insights were synthesized and used to
+      refine the final design.
+    </p>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+      <img
+        src="https://placehold.co/400x240/e8e4ee/666?text=Testing%0AScreenshot+1"
+        alt="User testing session screenshot"
+        class="rounded-lg w-full border border-gray-200"
+      >
+      <div class="space-y-4">
+        <img
+          src="https://placehold.co/400x110/e8e4ee/666?text=Testing+Artifact+1"
+          alt="User testing findings"
+          class="rounded-lg w-full border border-gray-200"
+        >
+        <img
+          src="https://placehold.co/400x110/e8e4ee/666?text=Testing+Artifact+2"
+          alt="User testing results summary"
+          class="rounded-lg w-full border border-gray-200"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Design -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
+    <h2 class="text-2xl md:text-3xl font-bold text-center">Final Design</h2>
+    <p class="mt-6 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto">
+      The final redesign introduced a cleaner layout with better content hierarchy,
+      improved navigation between program categories, and full responsiveness across
+      device sizes. The visual language was brought into alignment with Health Partners'
+      updated brand guidelines, creating a cohesive experience for members exploring
+      their programs and perks.
+    </p>
+
+    <div class="mt-12 flex flex-col md:flex-row gap-6">
+      <img
+        src="https://placehold.co/480x750/e8e4ee/666?text=Final+Design%0APage+1"
+        alt="Final design — Programs and Perks page 1"
+        class="rounded-lg w-full md:w-1/2 border border-gray-200"
+      >
+      <img
+        src="https://placehold.co/480x750/e8e4ee/666?text=Final+Design%0APage+2"
+        alt="Final design — Programs and Perks page 2"
+        class="rounded-lg w-full md:w-1/2 border border-gray-200"
+      >
+    </div>
+
+    <!-- Full-width final screenshot -->
+    <div class="mt-8">
+      <img
+        src="https://placehold.co/1200x500/e8e4ee/666?text=Full+Width+Final+Design+Screenshot"
+        alt="Full-width view of the final redesigned Health Partners pages"
+        class="rounded-lg w-full border border-gray-200"
+      >
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="bg-gray-100 px-6 md:px-20 py-16 md:py-24">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold leading-snug text-center">Want to get in touch?<br>Drop me a line!</h2>
+      <form class="mt-10 max-w-2xl mx-auto" onsubmit="return false;">
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="flex-1">
+            <label class="text-[0.65rem] font-bold tracking-[0.2em] uppercase">Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="mt-2 w-full border-b border-gray-400 bg-transparent py-2 text-sm outline-none focus:border-brand transition-colors"
+            >
+          </div>
+          <div class="flex-1">
+            <label class="text-[0.65rem] font-bold tracking-[0.2em] uppercase">Email Address</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="mt-2 w-full border-b border-gray-400 bg-transparent py-2 text-sm outline-none focus:border-brand transition-colors"
+            >
+          </div>
+        </div>
+        <div class="mt-8">
+          <label class="text-[0.65rem] font-bold tracking-[0.2em] uppercase">Write a Message</label>
+          <textarea
+            placeholder="Enter your message"
+            rows="5"
+            class="mt-2 w-full border border-gray-300 bg-transparent p-3 text-sm outline-none resize-none focus:border-brand transition-colors"
+          ></textarea>
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="mt-6 px-8 py-3 bg-brand text-white text-[0.65rem] font-bold tracking-[0.2em] uppercase rounded hover:opacity-90 transition-opacity"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-6 md:px-20 py-6 text-center text-xs text-gray-400">
+    <span>01 / 01</span>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
