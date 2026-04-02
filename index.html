@@ -26,6 +26,56 @@
     }
   </script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Nav link animated underline */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #1B0A3C;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Snowflakes */
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      width: 6px;
+      height: 6px;
+      background: #b8a9d4;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0;
+      animation: snowfall linear infinite;
+    }
+    @keyframes snowfall {
+      0% { opacity: 0; transform: translateY(0) translateX(0) rotate(0deg); }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.5; }
+      100% { opacity: 0; transform: translateY(500px) translateX(60px) rotate(360deg); }
+    }
+
+    /* Card hover lift */
+    .card-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-lift:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(27, 10, 60, 0.1);
+    }
+
+    /* Button pulse on hover */
+    .btn-glow:hover {
+      box-shadow: 0 0 20px rgba(27, 10, 60, 0.3);
+    }
+  </style>
 </head>
 <body class="font-sans text-gray-900 antialiased overflow-x-hidden">
 
@@ -34,9 +84,9 @@
     <a href="index.html" class="text-2xl font-black tracking-tight">IF</a>
     <!-- Desktop nav -->
     <div class="hidden md:flex gap-10 text-xs font-semibold tracking-[0.2em] uppercase">
-      <a href="index.html" class="hover:text-brand transition-colors">Home</a>
-      <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
-      <a href="about.html" class="hover:text-brand transition-colors">About</a>
+      <a href="index.html" class="nav-link hover:text-brand transition-colors">Home</a>
+      <a href="#projects" class="nav-link hover:text-brand transition-colors">Projects</a>
+      <a href="about.html" class="nav-link hover:text-brand transition-colors">About</a>
     </div>
     <!-- Mobile hamburger -->
     <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5" aria-label="Toggle menu">
@@ -56,7 +106,7 @@
   </div>
 
   <!-- Hero -->
-  <section class="px-6 md:px-20 pt-16 md:pt-24 pb-20 md:pb-32">
+  <section id="hero" class="relative px-6 md:px-20 pt-16 md:pt-24 pb-20 md:pb-32 overflow-hidden">
     <p class="text-base font-semibold" data-aos="fade-up">Ivan Figueroa</p>
     <p class="text-sm text-gray-500 mt-0.5" data-aos="fade-up" data-aos-delay="100">UX/UI Designer</p>
     <h1 class="mt-10 md:mt-16 text-4xl md:text-[3.25rem] font-medium leading-tight max-w-2xl" data-aos="fade-up" data-aos-delay="200">
@@ -66,7 +116,7 @@
 
   <!-- Projects -->
   <section id="projects" class="px-6 md:px-20 pb-20 md:pb-32">
-    <div class="bg-gray-50 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-3xl mx-auto" data-aos="fade-up">
+    <div class="card-lift bg-gray-50 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-3xl mx-auto" data-aos="fade-up">
       <div class="w-full md:w-1/2">
         <img
           src="images/imac-mockup.png"
@@ -80,7 +130,7 @@
         <p class="text-sm text-gray-500 mt-1">Member programs page redesign</p>
         <a
           href="work/health-partners.html"
-          class="inline-block mt-5 px-6 py-2.5 bg-brand text-white text-sm font-medium rounded-full hover:opacity-90 transition-opacity"
+          class="inline-block mt-5 px-6 py-2.5 bg-brand text-white text-sm font-medium rounded-full btn-glow transition-all"
         >
           View Project
         </a>
@@ -133,6 +183,22 @@
     document.getElementById('menu-toggle').addEventListener('click', function () {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
+
+    // Snowflakes in hero
+    (function () {
+      var hero = document.getElementById('hero');
+      for (var i = 0; i < 25; i++) {
+        var el = document.createElement('span');
+        el.className = 'snowflake';
+        var size = Math.random() * 5 + 3;
+        el.style.width = size + 'px';
+        el.style.height = size + 'px';
+        el.style.left = Math.random() * 100 + '%';
+        el.style.animationDuration = (Math.random() * 8 + 10) + 's';
+        el.style.animationDelay = (Math.random() * 6) + 's';
+        hero.appendChild(el);
+      }
+    })();
   </script>
 </body>
 </html>
