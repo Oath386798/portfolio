@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Partners — My Dashboard Redesign — Ivan Figueroa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#1B0A3C',
+              light: '#F5F0FA',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #1B0A3C;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+  </style>
+</head>
+<body class="font-sans text-gray-900 antialiased overflow-x-hidden">
+
+  <!-- Nav -->
+  <nav class="flex items-center justify-between px-6 md:px-20 py-6 border-b border-gray-100">
+    <a href="../index.html" class="text-2xl font-black tracking-tight">IF</a>
+    <div class="hidden md:flex gap-10 text-xs font-semibold tracking-[0.2em] uppercase">
+      <a href="../index.html" class="nav-link hover:text-brand transition-colors">Home</a>
+      <a href="../index.html#projects" class="nav-link hover:text-brand transition-colors">Projects</a>
+      <a href="../about.html" class="nav-link hover:text-brand transition-colors">About</a>
+    </div>
+    <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-white"></span>
+      <span class="block w-6 h-0.5 bg-white"></span>
+      <span class="block w-6 h-0.5 bg-white"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-6">
+    <div class="flex flex-col gap-4 text-sm font-semibold tracking-[0.15em] uppercase">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="bg-brand-light">
+    <div class="max-w-6xl mx-auto px-6 md:px-20 py-16 md:py-20 flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <h1 class="text-3xl md:text-4xl font-bold" data-aos="fade-up">Health Partners</h1>
+        <p class="mt-3 text-sm text-gray-500" data-aos="fade-up" data-aos-delay="100">My Dashboard Redesign</p>
+        <p class="mt-1 text-sm text-gray-500" data-aos="fade-up" data-aos-delay="100">UX/UI Design</p>
+        <a
+          href="#overview"
+          class="inline-block mt-6 px-6 py-2.5 bg-brand text-white text-sm font-medium rounded-full hover:opacity-90 transition-opacity"
+        >
+          View Case Study
+        </a>
+      </div>
+      <div class="w-full md:w-[340px] shrink-0" data-aos="fade-left" data-aos-delay="200">
+        <img
+          src="../images/case-study-2-images/phone-mockup.png"
+          alt="Health Partners My Dashboard redesign shown on a phone"
+          class="w-full"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview & Role -->
+  <section id="overview" class="max-w-6xl mx-auto px-6 md:px-20 py-16 md:py-20">
+    <div class="flex flex-col md:flex-row gap-12 md:gap-20">
+      <div class="flex-1" data-aos="fade-up">
+        <h2 class="text-2xl md:text-3xl font-bold">Project Overview</h2>
+        <p class="mt-4 text-sm leading-relaxed text-gray-600">
+          Health Partners members and member patients have access to the authenticated experience where they can accomplish key tasks. The business has noticed the click-through rate on the campaign cards is low and the assumption is that users don't feel that the offerings presented are personalized to them.
+        </p>
+      </div>
+      <div class="md:w-48 shrink-0" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-2xl md:text-3xl font-bold">Role</h2>
+        <ul class="mt-4 text-sm text-gray-600 space-y-1">
+          <li>&bull; UX/UI Design</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Redesign Callout -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
+    <div class="bg-brand text-white rounded-xl px-8 md:px-10 py-8 md:py-10" data-aos="fade-up">
+      <h3 class="text-base md:text-lg font-bold">Why was a redesign needed?</h3>
+      <ul class="mt-4 text-sm leading-relaxed opacity-90 space-y-3">
+        <li>&bull; Low click-through rate on the programs and offerings on the My Dashboard page</li>
+        <li>&bull; Users have indicated that the programs feel generic</li>
+        <li>&bull; Users have mentioned that the page doesn't act as a true dashboard and that they wish there was a faster way of getting to frequently visited pages in the authenticated experience</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Current State -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
+    <h2 class="text-2xl md:text-3xl font-bold text-center" data-aos="fade-up">Current State</h2>
+    <p class="mt-4 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      Shown below is the current layout of the desktop and mobile version of the My Dashboard page. Users have told us that they find the Appointments, Test Results and Bills cards useful but they don't engage with the program cards as often (large cards) because the cards come across as generic. Users have also indicated that they'd like this page to feel more personalized.
+    </p>
+
+    <div class="mt-12 flex flex-col md:flex-row gap-8 md:gap-12 items-start justify-center">
+      <div class="text-center" data-aos="fade-right">
+        <p class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4">Desktop</p>
+        <img
+          src="../images/case-study-2-images/current-desktop.png"
+          alt="Current desktop dashboard layout"
+          class="w-full max-w-md"
+        >
+      </div>
+      <div class="text-center" data-aos="fade-left">
+        <p class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4">Mobile</p>
+        <img
+          src="../images/case-study-2-images/current-mobile.png"
+          alt="Current mobile dashboard layout"
+          class="w-full max-w-[180px] mx-auto"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Competitive Analysis -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
+    <h2 class="text-2xl md:text-3xl font-bold text-center" data-aos="fade-up">Competitive Analysis</h2>
+    <div class="mt-12 space-y-6">
+      <img data-aos="fade-up"
+        src="../images/case-study-2-images/competitive-analysis-screens.png"
+        alt="Competitive analysis — healthcare dashboard comparisons"
+        class="w-full"
+      >
+      <img data-aos="fade-up" data-aos-delay="100"
+        src="../images/case-study-2-images/competitive-analysis.png"
+        alt="Competitive analysis — feature comparison matrix"
+        class="w-full"
+      >
+    </div>
+    <p class="mt-8 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto" data-aos="fade-up">
+      From analyzing these competitors, there's an opportunity to <strong>rework the card hierarchy on the page, update the copy to feel more personalized</strong> and change the page layout so that it shows a proper dashboard where users can see vital information and take actions that will improve their overall health and well-being.
+    </p>
+  </section>
+
+  <!-- Ideation Sketches -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
+    <h2 class="text-2xl md:text-3xl font-bold text-center" data-aos="fade-up">Ideation Sketches</h2>
+    <p class="mt-4 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      I started <strong>drawing some ideation sketches</strong> of what an updated My Dashboard page could look like on mobile. I made three different options that focused on making the information presented more personalized for users based on their health needs. I'm also thinking about ways to include shortcuts to commonly visited pages in the authenticated experience.
+    </p>
+    <div class="mt-12">
+      <img data-aos="fade-up"
+        src="../images/case-study-2-images/ideation-sketches.png"
+        alt="Hand-drawn ideation sketches of dashboard redesign concepts"
+        class="w-full max-w-3xl mx-auto"
+      >
+    </div>
+  </section>
+
+  <!-- Digital Wireframes -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
+    <h2 class="text-2xl md:text-3xl font-bold text-center" data-aos="fade-up">Digital Wireframes</h2>
+
+    <!-- Low Fidelity -->
+    <div class="mt-12">
+      <h3 class="text-lg font-light text-center" data-aos="fade-up">Low Fidelity</h3>
+      <p class="mt-4 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        I then translated my sketches into my first set of <strong>low fidelity wireframes</strong> and presented it to stakeholders and other designers on my team. I took their feedback and implemented it into the high fidelity designs.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-6 justify-center items-start">
+        <img data-aos="fade-up" src="../images/case-study-2-images/lofi-1.png" alt="Low fidelity wireframe option 1" class="w-[160px] md:w-[180px]">
+        <img data-aos="fade-up" data-aos-delay="100" src="../images/case-study-2-images/lofi-2.png" alt="Low fidelity wireframe option 2" class="w-[160px] md:w-[180px]">
+        <img data-aos="fade-up" data-aos-delay="200" src="../images/case-study-2-images/lofi-3.png" alt="Low fidelity wireframe option 3" class="w-[160px] md:w-[180px]">
+      </div>
+    </div>
+
+    <!-- High Fidelity -->
+    <div class="mt-16">
+      <h3 class="text-lg font-light text-center" data-aos="fade-up">High Fidelity</h3>
+      <p class="mt-4 text-sm leading-relaxed text-gray-600 text-center max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Here are high fidelity wireframes that were going to be used in future moderated usability tests. Due to financial reasons this project was paused indefinitely and I was not able to conduct user testing.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-6 justify-center items-start">
+        <img data-aos="fade-up" src="../images/case-study-2-images/final-1.png" alt="High fidelity wireframe — version 1" class="w-[160px] md:w-[180px]">
+        <img data-aos="fade-up" data-aos-delay="100" src="../images/case-study-2-images/final-2.png" alt="High fidelity wireframe — version 2" class="w-[160px] md:w-[180px]">
+        <img data-aos="fade-up" data-aos-delay="200" src="../images/case-study-2-images/final-3.png" alt="High fidelity wireframe — version 3" class="w-[160px] md:w-[180px]">
+      </div>
+    </div>
+  </section>
+
+  <!-- Future Considerations -->
+  <section class="max-w-6xl mx-auto px-6 md:px-20 pb-16 md:pb-20">
+    <h2 class="text-2xl md:text-3xl font-bold text-center" data-aos="fade-up">Future Considerations</h2>
+    <div class="mt-6 text-sm leading-relaxed text-gray-600 max-w-2xl mx-auto space-y-4" data-aos="fade-up" data-aos-delay="100">
+      <p>
+        I think moderated usability studies with both Health Partners members and non-members would provide me with the necessary feedback to arrive at a final design. I'd love to continue working with a copywriter to make sure that the language in this design drives home the fact that the offerings on this page are tailored specifically for that user. Once the final design goes live I'd like to give it 2-4 weeks before we check the click-through analytics on programs and make adjustments if needed.
+      </p>
+      <p>
+        My biggest takeaway from this project is the importance of demonstrating empathy in healthcare UI. The reason I say this is because when people normally deal with health care or health insurance it's typically under difficult or negative circumstances so being able to create meaningful designs helps reduce the stress associated with getting help. I love when technology acts as a bridge to hope and healing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="bg-gray-100 px-6 md:px-20 py-16 md:py-24">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold leading-snug text-center" data-aos="fade-up">Want to get in touch?<br>Drop me a line!</h2>
+      <form class="mt-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100" action="https://formspree.io/f/mzdkjjdo" method="POST" id="contact-form">
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="flex-1">
+            <label class="text-[0.65rem] font-bold tracking-[0.2em] uppercase">Name</label>
+            <input
+              type="text"
+              name="name" placeholder="Enter your name"
+              class="mt-2 w-full border-b border-gray-400 bg-transparent py-2 text-sm outline-none focus:border-brand transition-colors"
+            >
+          </div>
+          <div class="flex-1">
+            <label class="text-[0.65rem] font-bold tracking-[0.2em] uppercase">Email Address</label>
+            <input
+              type="email"
+              name="email" placeholder="Enter your email"
+              class="mt-2 w-full border-b border-gray-400 bg-transparent py-2 text-sm outline-none focus:border-brand transition-colors"
+            >
+          </div>
+        </div>
+        <div class="mt-8">
+          <label class="text-[0.65rem] font-bold tracking-[0.2em] uppercase">Write a Message</label>
+          <textarea
+            name="message" placeholder="Enter your message"
+            rows="5"
+            class="mt-2 w-full border border-gray-300 bg-transparent p-3 text-sm outline-none resize-none focus:border-brand transition-colors"
+          ></textarea>
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="mt-6 px-8 py-3 bg-brand text-white text-[0.65rem] font-bold tracking-[0.2em] uppercase rounded hover:opacity-90 transition-opacity"
+          >
+            Submit
+          </button>
+        </div>
+        <p id="form-success" class="hidden mt-4 text-sm text-green-600 font-medium text-center">Thanks! Your message has been sent.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 px-6 md:px-20 py-12">
+    <div class="max-w-6xl mx-auto flex flex-col items-center gap-6">
+      <a href="../index.html" class="text-2xl font-black tracking-tight">IF</a>
+      <div class="flex gap-8 text-xs font-semibold tracking-[0.2em] uppercase">
+        <a href="../index.html" class="hover:text-brand transition-colors">Home</a>
+        <a href="../index.html#projects" class="hover:text-brand transition-colors">Projects</a>
+        <a href="../about.html" class="hover:text-brand transition-colors">About</a>
+      </div>
+      <div class="flex gap-5 mt-2">
+        <a href="https://www.linkedin.com/in/ivan-f-a74400212/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-gray-400 hover:text-brand transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:hello@ivanfigueroa.com" aria-label="Email" class="text-gray-400 hover:text-brand transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 80 });
+
+    // Contact form AJAX submit
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var form = this;
+      var btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending...';
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (r) {
+        if (r.ok) {
+          form.reset();
+          btn.textContent = 'Sent!';
+          document.getElementById('form-success').classList.remove('hidden');
+          setTimeout(function () { btn.textContent = 'Submit'; }, 3000);
+        } else {
+          btn.textContent = 'Error — try again';
+          setTimeout(function () { btn.textContent = 'Submit'; }, 3000);
+        }
+      }).catch(function () {
+        btn.textContent = 'Error — try again';
+        setTimeout(function () { btn.textContent = 'Submit'; }, 3000);
+      });
+    });
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
