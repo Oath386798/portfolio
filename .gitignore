@@ -24,3 +24,9 @@ node_modules/
 # OS specific
 .DS_Store
 /.agent-shell/
+
+# Local AI / task tooling (not site assets)
+.claude/
+.taskmaster/
+.mcp.json
+/CLAUDE.md
